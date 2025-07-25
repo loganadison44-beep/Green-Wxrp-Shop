@@ -27,7 +27,14 @@ This project is a mobile-first, multilingual LIFF WebApp for a Thai herbal drink
    ```bash
    npm run dev
    ```
-3. Configure your environment variables for Google Sheets API and LIFF SDK.
+3. Copy `.env.example` to `.env` and fill in the required variables:
+   `GOOGLE_SHEETS_ID`, `GOOGLE_SHEETS_API_KEY`, and `LIFF_ID`.
+
+## Environment Variables
+
+The application uses environment variables for connecting to Google Sheets and
+the LIFF SDK. Create a `.env` file in the project root using the provided
+`.env.example` as a starting point.
 
 ## Folder Structure
 - `src/features/products` - Product list and stock
