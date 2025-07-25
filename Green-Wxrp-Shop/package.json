@@ -1,5 +1,18 @@
 {
+  "name": "green-wxrp-shop",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "node --test"
+  },
   "dependencies": {
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "next": "15.4.3",
     "@shadcn/ui": "^0.0.4",
     "autoprefixer": "^10.4.21",
     "googleapis": "^154.0.0",
@@ -7,5 +20,15 @@
     "postcss": "^8.5.6",
     "recharts": "^3.1.0",
     "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.3",
+    "@eslint/eslintrc": "^3"
   }
 }
