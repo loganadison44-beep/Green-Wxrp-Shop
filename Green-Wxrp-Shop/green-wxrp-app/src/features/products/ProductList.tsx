@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 
 interface Product {
@@ -32,9 +34,10 @@ export default function ProductList() {
 
     const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/Products?key=${apiKey}`;
 
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
+    async function load() {
+      try {
+        const res = await fetch(url);
+        const data = await res.json();
         if (!data.values) return;
         const rows = data.values.slice(1); // skip header
         const list: Product[] = rows.map((r: string[]) => ({
@@ -47,10 +50,12 @@ export default function ProductList() {
         }));
         setProducts(list);
         localStorage.setItem("products", JSON.stringify(list));
-      })
-      .catch((err) => {
+      } catch (err) {
         console.error("Failed to fetch products", err);
-      });
+      }
+    }
+
+    load();
   }, []);
 
   const displayed = filter

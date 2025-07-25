@@ -1,8 +1,4 @@
-import dynamic from "next/dynamic";
-
-const ProductList = dynamic(() => import("../../features/products/ProductList"), {
-  ssr: false,
-});
+import ProductList from "../../features/products/ProductList";
 
 export default function ProductsPage() {
   return (
