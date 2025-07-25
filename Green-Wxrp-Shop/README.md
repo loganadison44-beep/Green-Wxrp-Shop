@@ -18,6 +18,12 @@ This project is a mobile-first, multilingual LIFF WebApp for a Thai herbal drink
 - Google Sheets API
 - LIFF SDK
 
+## Deployment
+
+The production deployment lives at:
+
+`kratom-shopv1-91sa2eeia-loganadison44-beeps-projects.vercel.app`
+
 ## Getting Started
 1. Install dependencies:
    ```bash

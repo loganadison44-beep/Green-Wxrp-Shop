@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    domains: ["kratom-shopv1-91sa2eeia-loganadison44-beeps-projects.vercel.app"],
+  },
 };
 
 export default nextConfig;
